@@ -11,14 +11,14 @@ type Data struct {
 
 func createData() *Data {
 	return &Data{
-        Value: 42,
-    }
+		Value: 42,
+	}
 }
 
 func main() {
 	for i := 0; i < 1000000; i++ {
 		obj := createData()
-        _ = obj
+		_ = obj
 	}
 	fmt.Println("Done")
 }
