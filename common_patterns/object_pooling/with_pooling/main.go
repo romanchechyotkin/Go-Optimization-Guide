@@ -69,6 +69,8 @@ func main() {
 			data := generateDataJson()
 
 			obj := dataPool.Get().(*Data) // Retrieve from pool
+			*obj = Data{}
+
 			log.Printf("iteration #%d; obj before unmarshal %+v\n", i, obj)
 			json.Unmarshal(data, obj)
 			log.Printf("iteration #%d; obj after unmarshal %+v\n", i, obj)
